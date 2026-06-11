@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+
+<html lang="ko"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Swiss Serenity - ALPINIA</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&amp;family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+      tailwind.config = {
+        darkMode: "class",
+        theme: {
+          extend: {
+            "colors": {
+                    "surface-container-high": "#dee8ff",
+                    "on-secondary-container": "#5f6365",
+                    "error": "#ba1a1a",
+                    "on-secondary-fixed": "#181c1e",
+                    "surface-container-highest": "#d8e3fa",
+                    "on-error-container": "#93000a",
+                    "surface": "#f9f9ff",
+                    "outline-variant": "#c4c6cf",
+                    "tertiary-fixed": "#79f7ea",
+                    "tertiary": "#002522",
+                    "primary": "#002045",
+                    "surface-dim": "#cfdaf1",
+                    "tertiary-fixed-dim": "#5adace",
+                    "on-tertiary-fixed-variant": "#00504a",
+                    "on-tertiary": "#ffffff",
+                    "on-surface": "#111c2c",
+                    "on-primary": "#ffffff",
+                    "primary-fixed": "#d6e3ff",
+                    "background": "#f9f9ff",
+                    "inverse-on-surface": "#ebf1ff",
+                    "on-secondary-fixed-variant": "#434749",
+                    "on-primary-fixed": "#001b3c",
+                    "on-primary-fixed-variant": "#2d476f",
+                    "on-error": "#ffffff",
+                    "surface-container-lowest": "#ffffff",
+                    "on-primary-container": "#86a0cd",
+                    "on-background": "#111c2c",
+                    "inverse-primary": "#adc7f7",
+                    "outline": "#74777f",
+                    "surface-bright": "#f9f9ff",
+                    "secondary-fixed": "#e0e3e5",
+                    "on-tertiary-fixed": "#00201d",
+                    "secondary-fixed-dim": "#c3c7c9",
+                    "secondary-container": "#dde0e2",
+                    "on-secondary": "#ffffff",
+                    "surface-container-low": "#f0f3ff",
+                    "surface-variant": "#d8e3fa",
+                    "surface-container": "#e7eeff",
+                    "on-surface-variant": "#43474e",
+                    "inverse-surface": "#263142",
+                    "secondary": "#5b5f61",
+                    "primary-fixed-dim": "#adc7f7",
+                    "surface-tint": "#455f88",
+                    "error-container": "#ffdad6",
+                    "on-tertiary-container": "#1eb1a5",
+                    "primary-container": "#1a365d",
+                    "tertiary-container": "#003d38"
+            },
+            "borderRadius": {
+                    "DEFAULT": "0.125rem",
+                    "lg": "0.25rem",
+                    "xl": "0.5rem",
+                    "full": "0.75rem"
+            },
+            "spacing": {
+                    "margin-desktop": "48px",
+                    "margin-mobile": "16px",
+                    "section-gap": "80px",
+                    "container-max": "1280px",
+                    "stack-md": "16px",
+                    "gutter": "24px",
+                    "stack-sm": "8px",
+                    "stack-lg": "32px",
+                    "unit": "8px"
+            },
+            "fontFamily": {
+                    "label-md": ["Inter"],
+                    "body-lg": ["Inter"],
+                    "display-lg": ["Montserrat"],
+                    "headline-lg": ["Montserrat"],
+                    "caption": ["Inter"],
+                    "headline-md": ["Montserrat"],
+                    "body-md": ["Inter"],
+                    "headline-lg-mobile": ["Montserrat"]
+            },
+            "fontSize": {
+                    "label-md": ["14px", {"lineHeight": "20px", "letterSpacing": "0.05em", "fontWeight": "600"}],
+                    "body-lg": ["18px", {"lineHeight": "28px", "fontWeight": "400"}],
+                    "display-lg": ["64px", {"lineHeight": "72px", "letterSpacing": "-0.02em", "fontWeight": "700"}],
+                    "headline-lg": ["40px", {"lineHeight": "48px", "letterSpacing": "-0.01em", "fontWeight": "700"}],
+                    "caption": ["12px", {"lineHeight": "16px", "fontWeight": "400"}],
+                    "headline-md": ["24px", {"lineHeight": "32px", "fontWeight": "600"}],
+                    "body-md": ["16px", {"lineHeight": "24px", "fontWeight": "400"}],
+                    "headline-lg-mobile": ["32px", {"lineHeight": "40px", "fontWeight": "700"}]
+            }
+          },
+        },
+      }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.2);
+        }
+        .hero-shadow {
+            text-shadow: 0 4px 12px rgba(0, 32, 69, 0.3);
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background selection:bg-tertiary-fixed-dim/30">
+<!-- TopNavBar -->
+<nav class="fixed top-0 w-full z-50 bg-white/70 backdrop-blur-xl shadow-sm border-b border-white/20">
+<div class="flex justify-between items-center px-margin-desktop py-4 max-w-container-max mx-auto">
+<div class="font-display-lg text-headline-md tracking-tighter text-primary">BJM</div>
+<div class="hidden md:flex gap-gutter items-center">
+<a class="font-body-md text-body-md text-primary font-bold border-b-2 border-primary pb-1" href="#">Destinations</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">Experiences</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">Gallery</a>
+<a class="font-body-md text-body-md text-on-secondary-container hover:text-primary transition-colors" href="#">About</a>
+</div>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-lg font-label-md text-label-md active:scale-95 transition-transform">Book Now</button>
+</div>
+</nav>
+<!-- Hero Section -->
+<header class="relative h-screen w-full flex items-center justify-center overflow-hidden">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover" data-alt="A breathtaking cinematic wide shot of the Matterhorn peak in Switzerland during sunrise. The mountain is reflected in a crystal-clear glacial lake in the foreground, surrounded by patches of snow and wild alpine flora. The lighting is soft and golden, transitioning into a cool deep alpine blue sky. The overall aesthetic is clean, high-end, and serene, matching a premium travel brand identity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBFGw9Ro9shf4sQ-6zjT5ym3oJXmS0S9hYikixZexHMfWI0cCeGiFyL90L4WbyFgt4JID0IFphQuAKvs9gc3WGPF24tB7xu27COoyJz2XMn71rUjeq8dZc3Zb5sixUTgCnle3DZMPgN4rymx_iLWhIX8yuV9O4seL0F7Tr4rVaxWJWKXrBYGtMqdjqL-IiQcQ-vMZ6Fo5Q4vCmp-867htpEG_z9jg7ORQMdWpJOsuwfC_K9JQq-4R9Bogi_MBCD3YUXHm-uliC0Q7A4"/>
+<div class="absolute inset-0 bg-gradient-to-b from-primary/20 to-primary/40"></div>
+</div>
+<div class="relative z-10 text-center px-margin-mobile">
+<h1 class="font-display-lg text-headline-lg-mobile md:text-display-lg text-white mb-stack-lg hero-shadow">스위스 7박 8일( 9/5~12일) 가족 여행</h1>
+<button class="bg-tertiary-fixed-dim text-on-tertiary-fixed px-10 py-4 rounded-xl font-label-md text-label-md uppercase tracking-widest hover:bg-tertiary-fixed transition-all duration-300 shadow-xl" onclick="document.getElementById('itinerary').scrollIntoView({behavior: 'smooth'})">여행 스케줄</button>
+</div>
+<div class="absolute bottom-10 left-1/2 -translate-x-1/2 animate-bounce">
+<span class="material-symbols-outlined text-white text-4xl">keyboard_double_arrow_down</span>
+</div>
+</header>
+<!-- Destination Grid -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="text-center mb-section-gap">
+<span class="text-on-tertiary-container bg-tertiary-fixed-dim/20 px-4 py-1 rounded-full font-label-md text-caption uppercase tracking-wider">주요 목적지</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-4">스위스의 보석 같은 도시들</h2>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter"><!-- Grindelwald -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500">
+<img alt="그린델발트" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC8FaqjL41XNmJ7slPokoQiimMicNczAmMN5w73eRHUBz-UAa38pGjP4cgGFc32OE7xfeltpmdJNdekG2MzuuCI5gfxZYl45h1X9_CU46dencrtkj7twrrGR8TkRQvnyjNmFeOb16ec5AQR7lm4dMDmf-G3ZWB_uRE4qdmd4cHb7KGw3ssssT8PNZOLQkFwDHOvY8Q5PyDbckDDNF_4856q5-QRHhdXZVi3Js6U1o39cMoZXq1Klm0O2aFpQIEX3Ers37_OQnB2UISq"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 glass-card border-none">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">그린델발트</h3>
+<p class="font-body-md text-on-surface-variant mb-4">아이거 북벽 아래 펼쳐진 동화 같은 마을.</p>
+<span class="font-label-md text-label-md text-primary flex items-center gap-2">자세히 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Interlaken -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500">
+<img alt="인터라켄" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCTfjFg5d0QEu3u3CGt3ESIquHhaLebKPSRChyFJxV1nE0eY9FAAluszTZLZzk7b189Mdv9dLdNHNKe0mlU3uzr8VmLlHsG8MmjXTVsBj3i411Igtzd7K66TvecPJHRAwTBFi5GwkofPGitUYS_HM5Ml2330j3GRj3LqebbYjzJOG6_8BWK5isk7-jcBvd7EYN06zHcGBdA1S98NcRJsaDRkUjNmenGIsV95ftoGOMLDD5xFwOtdbGfnGEOAzLNW9jREFxXZ54FdVQJ"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 glass-card border-none">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">인터라켄</h3>
+<p class="font-body-md text-on-surface-variant mb-4">두 호수 사이의 모험 가득한 관문.</p>
+<span class="font-label-md text-label-md text-primary flex items-center gap-2">자세히 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Montreux -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500">
+<img alt="몽트뢰" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAP8K_vTQx4jz_-uF6cVYUNkhnlODU8A-NJyDyAjW0rJBIcPm0mIkeZjbl1KgutIiGszAZrbT6t1ofZlQsjac_S9sqghOuddT_giejQG8h86FQjaeig2dV9eBgphzSZVGXfpwbu_CeOxWROq5uFqszJakGrLQUK1SrAckb9do9yGVX8HrAAHZkuyKiiB1Z2Z4-C5GXJi3c_MWEm8XtV3WC45mBfu6q7cmy4XKnpd3-WBgU7M8drn4RgVTiQf8RBTTqZHUWhr5PvS4g9"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 glass-card border-none">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">몽트뢰</h3>
+<p class="font-body-md text-on-surface-variant mb-4">레만 호수의 낭만과 재즈의 선율.</p>
+<span class="font-label-md text-label-md text-primary flex items-center gap-2">자세히 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Bern -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500">
+<img alt="베른" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDjt1iK6E0ZLB8c_2TT_OHm2-1S0JuMi9rb6u1USSDx2Hg-UV-AFdoYVnRHIzT7lJPlTSFOlBFU11jmYb8StlDH40sCiIpkjlJ0YET-JRW5bPPYuflwW5c7hsDWTkLsLXgdysQge6Ifl6-r0xaFD5646x2_WjdGw9-oypQilh-h5gcHgpbE2WZaCVyzALZ5_wQJi93aOQskBuk1an_ZNv1tIxRxEucDOOv8pWf8F3vh3GGVVIPAVJsMRh6dLFElwnnE4ZyeD1tmJqvW"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 glass-card border-none">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">베른</h3>
+<p class="font-body-md text-on-surface-variant mb-4">아레강이 감싸 안은 중세의 아름다움.</p>
+<span class="font-label-md text-label-md text-primary flex items-center gap-2">자세히 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div>
+<!-- Schynige Platte -->
+<div class="group relative h-[500px] overflow-hidden rounded-xl shadow-sm hover:shadow-xl transition-all duration-500">
+<img alt="쉬니케플라테" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6mXo6prbCzWawxDBlEApq_vrid2MSvbl2bsb6fw10jX64L4fNYgRtew377cCktWRwPGB3azyIN-v3g5ZhuqhYbfSPWzdX2nOF7nP9Inqbk7rTMgUmN-L2M05jvBw_w2h-qd9W-aYfzyTihR0vuAurhYN1L8dI6QYbwkk2ebGVfU7wv46GEijKoGvmZ3MgFq0eHx9ZfEzKAbTQj5b-1hYX0p4LsKV_n9XrE8UJAvoRZXoPRGJEAPIZ2lWWXey6R44eTcNEys1h-k_I"/>
+<div class="absolute inset-0 bg-gradient-to-t from-primary/80 via-transparent to-transparent opacity-60"></div>
+<div class="absolute bottom-0 left-0 w-full p-8 glass-card border-none">
+<h3 class="font-headline-md text-headline-md text-primary mb-2">쉬니케플라테</h3>
+<p class="font-body-md text-on-surface-variant mb-4">알프스 3대 명봉을 한눈에 담는 정원.</p>
+<span class="font-label-md text-label-md text-primary flex items-center gap-2">자세히 보기 <span class="material-symbols-outlined text-sm">arrow_forward</span></span>
+</div>
+</div></div>
+</section>
+<!-- Experiences Section -->
+<section class="bg-surface-container-low py-section-gap">
+<div class="max-w-container-max mx-auto px-margin-desktop">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-stack-lg">
+<div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">hiking</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">알프스 하이킹</h4>
+<p class="font-body-md text-on-surface-variant">야생화가 가득한 초원과 만년설을 따라 걷는 세계 최고의 하이킹 코스를 만나보세요.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">downhill_skiing</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">월드 클래스 스키</h4>
+<p class="font-body-md text-on-surface-variant">최고의 설질을 자랑하는 스위스 스키장에서 짜릿한 겨울 스포츠의 정수를 느껴보세요.</p>
+</div>
+<div class="flex flex-col items-center text-center p-8 bg-white rounded-2xl shadow-sm border border-outline-variant/10">
+<div class="w-16 h-16 rounded-full bg-tertiary-fixed-dim/20 flex items-center justify-center mb-6">
+<span class="material-symbols-outlined text-primary text-3xl">train</span>
+</div>
+<h4 class="font-headline-md text-headline-md text-primary mb-4">그랜드 기차 여행</h4>
+<p class="font-body-md text-on-surface-variant">파노라마 뷰 기차를 타고 창밖으로 펼쳐지는 그림 같은 스위스의 풍경을 감상하세요.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Timeline Schedule Section -->
+<section class="bg-surface py-section-gap px-margin-desktop" id="itinerary">
+<div class="max-w-container-max mx-auto">
+<div class="text-center mb-section-gap">
+<span class="text-on-tertiary-container bg-tertiary-fixed-dim/20 px-4 py-1 rounded-full font-label-md text-caption uppercase tracking-wider">추천 일정</span>
+<h2 class="font-headline-lg text-headline-lg text-primary mt-4">스위스 7박 8일 완벽 타임라인</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">자연과 도시를 오가는 최적의 렌터카 추천 동선 (9/5~12)</p>
+</div>
+
+<div class="relative max-w-4xl mx-auto py-8">
+  <!-- Vertical line -->
+  <div class="absolute left-[31px] md:left-1/2 top-0 bottom-0 w-1 bg-outline-variant/30 md:-translate-x-1/2 rounded-full"></div>
+
+  <!-- Day 1 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:text-right md:pr-12 md:pb-0 pb-4 pl-20 md:pl-0 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow">
+          <h3 class="font-headline-md text-headline-md text-primary flex md:justify-end items-center gap-2">Day 1 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/5</span></h3>
+          <p class="font-body-md text-primary font-bold mb-3 border-b border-outline-variant/20 pb-2 inline-block">입국 및 그린델발트 이동</p>
+          <ul class="font-body-md text-on-surface-variant space-y-2 text-left md:text-right">
+            <li><span class="font-semibold text-primary/70">17:30</span> 취리히 공항 도착 및 입국 수속</li>
+            <li><span class="font-semibold text-primary/70">18:30</span> 렌터카 픽업 및 수하물 적재</li>
+            <li><span class="font-semibold text-primary/70">19:00</span> 공항 내 마트(Coop/Migros(맥주없음)) 장보기 (생수, 아침 식재료, 과일 등)</li>
+            <li><span class="font-semibold text-primary/70">20:00</span> 취리히 공항 출발</li>
+            <li><span class="font-semibold text-primary/70">22:30</span> <strong>그린델발트 숙소 도착</strong> 및 휴식</li>
+          </ul>
+      </div>
+    </div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-tertiary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full md:pl-12 hidden md:block"></div>
+  </div>
+
+  <!-- Day 2 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:pr-12 hidden md:block"></div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-primary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full pl-20 md:pl-12 md:pb-0 pb-4 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow text-left">
+          <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">Day 2 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/6</span> <span class="text-on-surface-variant text-body-md font-normal ml-1">| 인터라켄</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2">
+            <li><span class="font-semibold text-primary/70">09:30</span> 숙소 출발 (그린델발트)</li>
+            <li><span class="font-semibold text-primary/70">10:00</span> 인터라켄 오스트(동역) 도착 및 하더쿨름 푸니쿨라 탑승</li>
+            <li><span class="font-semibold text-primary/70">10:30~12:30</span> <strong>하더쿨름 전망대</strong> 산책 및 전경 감상</li>
+            <li><span class="font-semibold text-primary/70">13:00</span> 하더쿨름 or 인터라켄 시내 점심 식사</li>
+            <li><span class="font-semibold text-primary/70">14:30</span> 이젤발트(Isetwald)로 이동 (차량 15분)</li>
+            <li><span class="font-semibold text-primary/70">15:00~17:00</span> 이젤발트 선착장 산책 및 기스바흐 폭포 방문</li>
+            <li><span class="font-semibold text-primary/70">17:30</span> 인터라켄 서역 쿱(Coop)에서 저녁 거리 추가 장보기</li>
+            <li><span class="font-semibold text-primary/70">18:30</span> 그린델발트 숙소 복귀 및 저녁 식사</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 3 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:text-right md:pr-12 md:pb-0 pb-4 pl-20 md:pl-0 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow">
+          <h3 class="font-headline-md text-headline-md text-primary flex md:justify-end items-center gap-2"><span class="text-on-surface-variant text-body-md font-normal mr-1">몽트뢰(뢰만호) & 라보(시간보고 갈지 말지 결정) |</span> Day 3 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/7</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2 text-left md:text-right">
+            <li><span class="font-semibold text-primary/70">08:30</span> 숙소 출발 (장거리이므로 일찍 시작)</li>
+            <li><span class="font-semibold text-primary/70">10:45</span> <strong>시옹 성(Chillon Castle)</strong> 도착 및 내부 관람</li>
+            <li><span class="font-semibold text-primary/70">13:00</span> 몽트뢰 호숫가에서 점심 식사 및 산책</li>
+            <li><span class="font-semibold text-primary/70">15:00</span> 라보(Lavaux) 포도밭으로 이동 및 드라이브/산책</li>
+            <li><span class="font-semibold text-primary/70">17:00</span> 그린델발트로 복귀 출발</li>
+            <li><span class="font-semibold text-primary/70">19:15</span> 숙소 도착</li>
+          </ul>
+      </div>
+    </div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-tertiary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full md:pl-12 hidden md:block"></div>
+  </div>
+
+  <!-- Day 4 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:pr-12 hidden md:block"></div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-primary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full pl-20 md:pl-12 md:pb-0 pb-4 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow text-left">
+          <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">Day 4 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/8</span> <span class="text-on-surface-variant text-body-md font-normal ml-1">| 그린델발트 피르스트 + 놀이터</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2">
+            <li><span class="font-semibold text-primary/70">09:00</span> 그린델발트 피르스트 곤돌라 승강장 이동 (도보 또는 로컬 버스)</li>
+            <li><span class="font-semibold text-primary/70">09:30~11:30</span> <strong>피르스트 클리프 워크</strong> 및 바흐알프제(편도 1시간) 호수 하이킹</li>
+            <li><span class="font-semibold text-primary/70">12:00</span> 피르스트 정상 점심 식사</li>
+            <li><span class="font-semibold text-primary/70">13:30</span> 곤돌라 하행선 탑승 → <strong>보어트(Bort) 역</strong> 하차</li>
+            <li><span class="font-semibold text-primary/70">14:00~16:30</span> <strong>보어트 대형 놀이터</strong> (아이들이 가장 좋아하는 시간)</li>
+            <li><span class="font-semibold text-primary/70">17:00</span> 그린델발트 마을 내려와서 마트 & 기념품 쇼핑</li>
+            <li><span class="font-semibold text-primary/70">18:00</span> 숙소 휴식</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 5 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:text-right md:pr-12 md:pb-0 pb-4 pl-20 md:pl-0 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow">
+          <h3 class="font-headline-md text-headline-md text-primary flex md:justify-end items-center gap-2"><span class="text-on-surface-variant text-body-md font-normal mr-1">수도 베른, 역사와 곰 &lt;- 구시가지 정도 둘러보기, 남는 시간 활용 |</span> Day 5 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/9</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2 text-left md:text-right">
+            <li><span class="font-semibold text-primary/70">09:30</span> 숙소 출발</li>
+            <li><span class="font-semibold text-primary/70">10:45</span> <strong>베른 장미공원(Rosengarten)</strong> 주차 및 조망</li>
+            <li><span class="font-semibold text-primary/70">11:30</span> 곰 공원 방문 및 아레강 산책</li>
+            <li><span class="font-semibold text-primary/70">12:30</span> 베른 구시가지 점심 식사 및 시계탑 구경</li>
+            <li><span class="font-semibold text-primary/70">15:00</span> 베른 근교 쇼핑(Westside Mall 등) 또는 시내 관광</li>
+            <li><span class="font-semibold text-primary/70">17:00</span> 그린델발트로 복귀 출발</li>
+            <li><span class="font-semibold text-primary/70">18:15</span> 숙소 도착</li>
+          </ul>
+      </div>
+    </div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-tertiary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full md:pl-12 hidden md:block"></div>
+  </div>
+
+  <!-- Day 6 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:pr-12 hidden md:block"></div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-primary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full pl-20 md:pl-12 md:pb-0 pb-4 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow text-left">
+          <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">Day 6 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/10</span> <span class="text-on-surface-variant text-body-md font-normal ml-1">| 쉬니케 플라테(융프라우 웹캠 확인 후 꼭 날씨 좋을때 가야함)</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2">
+            <li><span class="font-semibold text-primary/70">09:30</span> 숙소 출발</li>
+            <li><span class="font-semibold text-primary/70">10:00~30</span> 인터라켄 오스트 역에서 빌더스빌행 기차 탑승</li>
+            <li><span class="font-semibold text-primary/70">10:45</span> 빌더스빌역에서 쉬니케 플라테행 기차 탑승(10:45분, 11:25분 / 40분 간격)</li>
+            <li><span class="font-semibold text-primary/70">11:37</span> 쉬니케 플라테 역 도착 후 다우베 전망대 출발</li>
+            <li><span class="font-semibold text-primary/70">12:20</span> 다우베 전망대 도착(360도 배경, 아이거, 묀히, 융프라우 3대 봉우리)</li>
+            <li><span class="font-semibold text-primary/70">13:00</span> 점심식사(쉬니케 플라테역 또는 트래킹 하면서 적당한 곳)</li>
+            <li><span class="font-semibold text-primary/70">14:00</span> 오베르 베르그 호른까지 난이도 확인 후 갈지 말지 결정</li>
+            <li><span class="font-semibold text-primary/70">15:01</span> 트래킹 마무리 후 역에서 출발(40분 간격)</li>
+            <li><span class="font-semibold text-primary/70">15:53~16:20</span> 빌더스빌 도착 -&gt; 인터라켄 오스트 도착</li>
+            <li><span class="font-semibold text-primary/70">17:00</span> 인터라켄 오스트 구경 or 숙소 복귀 후 식사</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Day 7 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:text-right md:pr-12 md:pb-0 pb-4 pl-20 md:pl-0 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow">
+          <h3 class="font-headline-md text-headline-md text-primary flex md:justify-end items-center gap-2"><span class="text-on-surface-variant text-body-md font-normal mr-1">그림젤 패스 드라이브 & 겔머반 &lt;-일정에 따라 삭제 가능 |</span> Day 7 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/11</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2 text-left md:text-right">
+            <li><span class="font-semibold text-primary/70">09:00</span> 숙소 출발</li>
+            <li><span class="font-semibold text-primary/70">10:15</span> <strong>그림젤 패스(Grimsel Pass)</strong> 정상 및 호수 감상</li>
+            <li><span class="font-semibold text-primary/70">12:00</span> <strong>겔머반(Gelmerbahn)</strong> 탑승 (사전 예약 필수, 스릴 넘치는 급경사 열차)</li>
+            <li><span class="font-semibold text-primary/70">14:30</span> 아레 협곡(Aare Gorge) 산책 (아이들도 걷기 좋음)</li>
+            <li><span class="font-semibold text-primary/70">17:00</span> 숙소 복귀 및 마지막 만찬 준비</li>
+          </ul>
+      </div>
+    </div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-tertiary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full md:pl-12 hidden md:block"></div>
+  </div>
+
+  <!-- Day 8 -->
+  <div class="relative flex flex-col md:flex-row items-center mb-16 group">
+    <div class="flex-1 w-full md:pr-12 hidden md:block"></div>
+    <div class="absolute left-8 md:left-1/2 w-6 h-6 bg-primary-fixed-dim rounded-full border-4 border-surface -translate-x-1/2 z-20 group-hover:scale-125 group-hover:bg-primary transition-all duration-300 shadow-md"></div>
+    <div class="flex-1 w-full pl-20 md:pl-12 md:pb-0 pb-4 z-10">
+      <div class="bg-white p-6 rounded-2xl shadow-sm border border-outline-variant/10 group-hover:shadow-md transition-shadow text-left">
+          <h3 class="font-headline-md text-headline-md text-primary flex items-center gap-2">Day 8 <span class="bg-surface-container text-primary text-caption px-2 py-1 rounded-md font-normal">9/12</span> <span class="text-on-surface-variant text-body-md font-normal ml-1">| 취리히 산책 및 출국 &lt;-취리히 안가고 숙소에서 여유있게 출발해도됨</span></h3>
+          <ul class="font-body-md text-on-surface-variant space-y-2">
+            <li><span class="font-semibold text-primary/70">09:00</span> 숙소 체크아웃 및 출발</li>
+            <li><span class="font-semibold text-primary/70">11:30</span> 취리히 시내 도착 및 주차</li>
+            <li><span class="font-semibold text-primary/70">12:00~15:30</span> 취리히 호수, <strong>린덴호프 언덕</strong>, 반호프슈트라세 자유 시간 및 점심</li>
+            <li><span class="font-semibold text-primary/70">16:00</span> 취리히 공항 도착 및 렌터카 반납</li>
+            <li><span class="font-semibold text-primary/70">19:30</span> 출국</li>
+          </ul>
+      </div>
+    </div>
+  </div>
+
+</div>
+</div>
+</section>
+<!-- Gallery Section -->
+<section class="py-section-gap px-margin-desktop max-w-container-max mx-auto">
+<div class="flex flex-col md:flex-row justify-between items-end mb-section-gap gap-stack-md">
+<div class="max-w-xl">
+<h2 class="font-headline-lg text-headline-lg text-primary">영감을 주는 갤러리</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant mt-4">스위스의 고요하고 순수한 자연의 미학을 담은 순간들입니다.</p>
+</div>
+<button class="font-label-md text-label-md text-primary border border-primary/20 px-6 py-2 rounded-lg hover:bg-primary hover:text-white transition-all">전체 보기</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-gutter">
+<div class="md:col-span-2 md:row-span-2 overflow-hidden rounded-xl group relative">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A breathtaking aerial view of a winding alpine road through lush green Swiss valleys and snowy peaks. The lighting is early morning with long shadows and soft golden highlights. The visual aesthetic is expansive and grandiose, using a palette of vibrant greens, deep blues, and crisp whites. Professional travel drone photography style." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA238RlTb5OZWHt0mH8Fjsi55MAc0dcAHDXWnEkvXlC0FAa9aaJSfrXPXFHUPY_qFeVwJ3zeNNuBl6vJn1TdQ-y5buZDSv9AFGuGPFSeZnx3RVBEjb3Be7JP69oPJpzFTQ2jySQ2LrhuowdF6xnROwsfuz_pqD5tIIb5p1CMxPTSwfYmlhyc1Ccf8nAghCCWL_mTNlJ_gJBiPfO8NzCN4aRWBQi2EmjM_aJb8m7wGm_bm5EvVnhW0JE0TJn8Wj3uJ2EE0Njp2PhtQSL"/>
+</div>
+<div class="md:col-span-1 md:row-span-1 overflow-hidden rounded-xl group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A close-up shot of a cozy Swiss wooden mountain hut nestled in a snowy field. The warm orange light from the windows creates a strong contrast with the cool blue snow and dark evening sky. The style is intimate and inviting, showcasing premium alpine living with a touch of rustic charm." src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ugRUCZgNoDHkuBCeG0IwPnhBtqdVbxHUWTsbUHHKqWqDUThbuVpSaCp2KqsxnQaVhZjLGV5Ud93BNRG4Y4EWkLTywxJv072J4IcK4i9Sp5HfsM-jBMWDKvbzCEaN2Sx32wGUE4B09T9hjMBEeWMnE6Ji4lFLk-Zlp5F4T6femPeNTENiosv8e4kQCcUcn823ozE9URhXh4AviLGl-FAg1HbyT4Wh9qUyKG71DxcOtlsKVCtfx3U7Hpm69XKMfHagcjARD2Hn2Rn4"/>
+</div>
+<div class="md:col-span-1 md:row-span-2 overflow-hidden rounded-xl group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A tranquil landscape of a Swiss lake with crystal clear turquoise water reflecting the surrounding forest and mountains. The lighting is soft and diffused, highlighting the clarity of the water and the rich textures of the natural environment. A minimalist and serene composition emphasizing environmental purity." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAoQI0atNtkclMa76AaWc10iQh_0bBmNiSkQ9Knr991J1Mw9eA0B00aUs4S9_yI0s9aMY-N3jZbUHkN1-0LhlPvLaOi1PE91bpfvbIQWzornhONjXTZsxDA5spJ1gLsshXnAxriF527KscuIlOsFomIZmwIi2DZ0uIsoKPcSwFHuiWGGRjtm9yjw4_iLk_evUUuPBIZG3-VFcEtMT2fL6lQSoAE27ovu_X2RwU2ltRzHbmA4Q3Me-IWgNCYXLhyBjZv5GRwEpYS6_tx"/>
+</div>
+<div class="md:col-span-1 md:row-span-1 overflow-hidden rounded-xl group">
+<img class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-1000" data-alt="A detailed shot of a red Swiss panoramic train crossing an arched stone viaduct high above a deep valley. The vibrant red of the train stands out against the slate grey rock and deep green forests. High-end editorial travel photography with a dynamic sense of motion and scale." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBS8VSwdXt03Bdo0H2AJ03AXpmod7LRH6huCCHRHceJgLkhJroo9T_7YZE8pemAfN8CFAFkBfXMMIrcfUaXnGwyxZiiNfbBASaz7pqYTQ-ciu7Zm445hAKzfEqN2JDHsGzYqs7WpQgHMrbQAeVzkFfnJ0cupmmPiHqkRVprHaEuLwNHteKICAUK-Ju4URpD8s7-35TUvEd2XobDxxpAWf5KJawSwvFtJb0GuSu91QA6ME4rpaiZCJIMiwn-t_C2jx6jugCW2sbRoKNm"/>
+</div>
+</div>
+</section>
+
+<!-- Footer -->
+<footer class="w-full py-section-gap bg-surface border-t border-outline-variant/30">
+<div class="flex flex-col md:flex-row justify-between items-center px-margin-desktop max-w-container-max mx-auto gap-stack-lg">
+<div class="flex flex-col items-center md:items-start">
+<div class="font-display-lg text-headline-md text-primary">BJM</div>
+<p class="font-caption text-caption text-on-secondary-container mt-2">© 2024 BJM Swiss Travel. All rights reserved.</p>
+</div>
+<div class="flex gap-stack-lg">
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">Privacy Policy</a>
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">Terms of Service</a>
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">Contact Us</a>
+<a class="font-caption text-caption text-on-secondary-container hover:text-primary transition-colors" href="#">Sitemap</a>
+</div>
+</div>
+</footer>
+<script>
+        // Micro-interaction for smooth scrolling and hover effects
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+        // Simple scroll reveal effect for cards
+        const observerOptions = {
+            threshold: 0.1
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('opacity-100');
+                    entry.target.classList.remove('opacity-0', 'translate-y-10');
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.group, .flex-col').forEach(el => {
+            el.classList.add('transition-all', 'duration-700', 'opacity-0', 'translate-y-10');
+            observer.observe(el);
+        });
+    </script>
+</body></html>
